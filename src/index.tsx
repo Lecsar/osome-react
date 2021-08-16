@@ -1,5 +1,12 @@
-import {render} from 'react-dom';
+import {StrictMode} from 'react';
+import ReactDOM from 'react-dom';
+import {Root} from './Root';
 
-import {App} from './App';
+import {store} from './store';
 
-render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <StrictMode>
+    <Root store={store} />
+  </StrictMode>,
+  document.getElementById('app')
+);
